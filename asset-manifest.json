@@ -1,0 +1,15 @@
+{
+  "main.css": "/egramClient/static/css/main.56f043ae.chunk.css",
+  "main.js": "/egramClient/static/js/main.86865081.chunk.js",
+  "main.js.map": "/egramClient/static/js/main.86865081.chunk.js.map",
+  "runtime~main.js": "/egramClient/static/js/runtime~main.c489841a.js",
+  "runtime~main.js.map": "/egramClient/static/js/runtime~main.c489841a.js.map",
+  "static/js/2.99950afe.chunk.js": "/egramClient/static/js/2.99950afe.chunk.js",
+  "static/js/2.99950afe.chunk.js.map": "/egramClient/static/js/2.99950afe.chunk.js.map",
+  "index.html": "/egramClient/index.html",
+  "precache-manifest.beac04103982a2b22e87ee081468aef0.js": "/egramClient/precache-manifest.beac04103982a2b22e87ee081468aef0.js",
+  "service-worker.js": "/egramClient/service-worker.js",
+  "static/css/main.56f043ae.chunk.css.map": "/egramClient/static/css/main.56f043ae.chunk.css.map",
+  "static/media/cancel.png": "/egramClient/static/media/cancel.00258ff0.png",
+  "static/media/egram_logo.png": "/egramClient/static/media/egram_logo.5aab7eac.png"
+}
