@@ -1,6 +1,6 @@
 # Egram
 
-**Description**
+**Description**  
 Egram is a social media web application which users can post texts and images on the main page for everyone to see. 
 
 Installing the app(Not recommended):
@@ -9,7 +9,7 @@ Installing the app will take a lot of steps, which includes installing node, npm
 This is a good starting point:
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-**Using the app:**
+**Using the app:**  
 Since it is very time consuming to install the application you can go through the included files or look at the code on Github. We are using Github pages which uses the branch “master” to build the web application. The submission time can be checked by the last commit made on both the repositories any code changes will easily be available through “git diff”.
 
 To use the app visit:
@@ -28,7 +28,7 @@ On the right, you can see top posters.
 
 On the main page, you can see other posts.
 
-**Documentation of the files:**
+**Documentation of the files:**  
 There are no files that we adapted from existing code.
 The default way to start writing a ReactJs app is to use “create-react app”. More on this here:
 https://github.com/facebook/create-react-app
