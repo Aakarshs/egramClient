@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-import { updateItem } from "../Api/httpApi";
-import { styles } from "../Styles/feedTableStyles";
+import { updateItem } from "../apiFunctions/httpApi";
+import { styles } from "../styles/feedTableStyles";
 
-import '../Styles/animations.css';
+import '../styles/animations.css';
 
 class FeedTable extends Component {
     render() {
+        //Like and dislike button Images.
+        var likeIcon = require("../assets/like.png");
+        var dislikeIcon = require("../assets/dislike.png");
         return (
             <div>
                 <div style={styles.feedOuterContainer}>
@@ -44,9 +47,11 @@ class FeedTable extends Component {
                                                     <div style={styles.likeDislikeContainer}>
 
                                                         {/*Like Button*/}
-                                                        <button onClick={() => { updateItem(item._id, item.likes + 1, item.dislikes) }} onMouseOut={this.props.handler} className={"likeButton"}>
+                                                        {/*Call the endpoint on button click to send data to the backend.*/}
+                                                        <button onClick={() => { updateItem(item._id, item.likes + 1, item.dislikes) }} 
+                                                        onMouseOut={this.props.mouseOutHandler} className={"likeButton"}>
                                                             <div style={styles.dislikeImageContainer}>
-                                                                <img style={styles.dislikeImage} src={require("../Assets/like.png")} />
+                                                                <img style={styles.dislikeImage} src={likeIcon} />
                                                                 <div style={styles.numLikesDislikes}>
                                                                     {item.likes}
                                                                 </div>
@@ -55,9 +60,11 @@ class FeedTable extends Component {
                                                         {/*--------------------------*/}
 
                                                         {/*Dislike Button*/}
-                                                        <button onClick={() => { updateItem(item._id, item.likes, item.dislikes + 1) }} className={"dislikeButton"}>
+                                                        {/*Call the endpoint on button click to send data to the backend.*/}
+                                                        <button onClick={() => { updateItem(item._id, item.likes, item.dislikes + 1) }} 
+                                                        className={"dislikeButton"}>
                                                             <div style={styles.likeImageContainer}>
-                                                                <img style={styles.likeImage} src={require("../Assets/dislike.png")} />
+                                                                <img style={styles.likeImage} src={dislikeIcon} />
                                                                 <div style={styles.numLikesDislikes}>
                                                                     {item.dislikes}
                                                                 </div>

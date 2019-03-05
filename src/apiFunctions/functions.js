@@ -53,29 +53,6 @@ export const addToDatabase = function () {
   };
  
 
-
-export const onChangeUserName = function (name) {
-  this.setState({
-    name: name.target.value,
-  });
-};
-
-
-export const onChange = function (text) {
-  this.setState({
-    text: text.target.value,
-  });
-};
-
-
-export const onChangeImage = function (imageUrl) {
-  this.setState({
-    modalImage: imageUrl.target.value,
-  });
-};
-
-
-
 //Function that gets the current date and time.
 export const getCurrentDateTime = function () {
   var today = new Date(),
@@ -108,7 +85,7 @@ export const getAll = function () {
 }
 
 export const checkImageExtention = function (imageUrl) {
-  var validExtentions = [".jpg", ".png", ".gif", ".jpeg"]
+  var validExtentions = ["jpg", "png", "gif", "jpeg"]
 
   if (imageUrl !== "") {
     //split the string to get the extention.
@@ -116,7 +93,7 @@ export const checkImageExtention = function (imageUrl) {
     var getExtention = splitString[splitString.length - 1]
 
     //If the extention is not present in the valid extention array.
-    if (imageUrl.includes(getExtention) != true) {
+    if (validExtentions.includes(getExtention) !== true) {
       alert("Invalid Image");
     }
     else {

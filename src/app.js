@@ -1,18 +1,18 @@
 //Module Imports
 import React, { Component } from "react";
-import TopPosters from "./Components/topPosters.js";
-import TopPosts from "./Components/topPosts";
-import FeedTable from "./Components/feedTable";
+import TopPosters from "./components/topPosters.js";
+import TopPosts from "./components/topPosts";
+import FeedTable from "./components/feedTable";
 
 //Function Imports
-import { addToDatabase, updateElementState, getCurrentDateTime, getAll, } from "./Api/functions";
-import { checkImageExtention } from "./Api/functions";
+import { addToDatabase, updateElementState, getCurrentDateTime, getAll, } from "./apiFunctions/functions";
+import { checkImageExtention } from "./apiFunctions/functions";
 
 //JSX Stylesheet Imports
-import { styles } from "./Styles/appStyles";
+import { styles } from "./styles/appStyles";
 
 //CSS Animations Imports
-import './Styles/animations.css';
+import './styles/animations.css';
 
 class List extends Component {
   constructor() {
@@ -34,7 +34,7 @@ class List extends Component {
 
     
     //Locally binding receiving props.
-    this.handler = this.handler.bind(this)
+    this.mouseOutHandler = this.mouseOutHandler.bind(this)
 
     //Locally binding imported functions to be used with local states.
     this.updateElementState = updateElementState.bind(this);
@@ -50,13 +50,12 @@ class List extends Component {
     this.getAll();
   }
 
-  //Function that gets triggered when the component renders.
-  componentWillUpdate() {
-    this.getAll();
-  }
+  //Function that gets triggered when the component renders. 
+  //(This looks for data changes and triggers re-render of the app.)
+ 
 
   //function to refresh the state and update all elements on the page.
-  handler() {
+  mouseOutHandler() {
     this.getAll();
   }
 
@@ -64,13 +63,16 @@ class List extends Component {
   render() {
     //Run before rendering:
 
+    //Sort the data according to most number of likes.
     var myData = [...this.state.items];
     myData.sort((a, b) => b.likes - a.likes);
 
+    console.log( myData.sort((a, b) => b.likes != a.likes));
+
     //Button Images.
-    var cancelButtImage = require("./Assets/cancel.png");
-    var egramLogo = require("./Assets/egram_logo.png");
-    var uploadImgButt = require("./Assets/upload_image.png");
+    var cancelButtImage = require("./assets/cancel.png");
+    var egramLogo = require("./assets/egramLogo.png");
+    var uploadImgButt = require("./assets/uploadImage.png");
 
     //Conditional Rendering for image delete button.
     if (this.state.modalImage !== "") {
@@ -93,14 +95,17 @@ class List extends Component {
       modal =
         <div style={styles.ModalBg}>
           <div>
-            <input style={styles.imageUrlTextArea} type="text" placeholder={"Put image URL here"} onChange={(imageUrl) => { this.updateElementState(imageUrl,"imageUrl") }} />
+            <input style={styles.imageUrlTextArea} type="text" placeholder={"Put image URL here"} 
+            onChange={(imageUrl) => { this.updateElementState(imageUrl,"imageUrl") }} />
           </div>
           <div>
             {/*Clicking on button executes the function to check the image exention.*/}
-            <button className={"doneButton"} onClick={() => {  this.checkImageExtention(this.state.modalImage); }}> Done </button>
+            <button className={"doneButton"} 
+            onClick={() => {  this.checkImageExtention(this.state.modalImage); }}> Done </button>
             
             {/*Clicking on cancel button resets the show modal state and modal image state.*/}
-            <button className={"cancelButton"} onClick={() => { this.setState({ showModal: false, modalImage:"", })}}> Cancel </button>
+            <button className={"cancelButton"} 
+            onClick={() => { this.setState({ showModal: false, modalImage:"", })}}> Cancel </button>
           </div>
         </div>
     }
@@ -141,7 +146,9 @@ class List extends Component {
               {/*Text, Name and Image container.*/}
               <div style={styles.statusFormOuterFlex}>
                 <div style={styles.statusFormInnerFlex}>
-                  <input style={styles.userNameContainer} type="text" value={this.state.name || ""} onChange={(name) => { this.updateElementState(name,"name") }} placeholder={"Enter your name (Should be 15 Characters)"} />
+                  <input style={styles.userNameContainer} type="text" value={this.state.name || ""} 
+                  onChange={(name) => { this.updateElementState(name,"name") }} 
+                  placeholder={"Enter your name (Should be 15 Characters)"} />
                   
                   {/*Clicking the post now button executes the function that sends the data to the database. */}
                   <div className={"postButton"} onClick={() => { this.addToDatabase() }}>
@@ -149,7 +156,10 @@ class List extends Component {
                   </div>
                 </div>
                 <div style={styles.textAreaContainer}>
-                  <textarea type="text" value={this.state.text || ""} placeholder={"What do you want to share with your community?! \n(Should be 150 characters.)"} resize={null} rows={3} onChange={(text) => { this.updateElementState(text,"text") }} style={styles.descriptionTextArea} />
+                  <textarea type="text" value={this.state.text || ""} 
+                  placeholder={"What do you want to share with your community?! \n(Should be 150 characters.)"}
+                  resize={null} rows={3} onChange={(text) => { this.updateElementState(text,"text") }} 
+                  style={styles.descriptionTextArea} />
                   
                   {/*Clicking the image button sets the value of modal to true which displays the modal. */}
                   <button className={"buttonBg"} onClick={() => { this.setState({ showModal: true }) }}>
@@ -162,7 +172,7 @@ class List extends Component {
             </div>
 
             {/*Table for the posts*/}
-            <FeedTable data={this.state.items} handler={this.handler} />
+            <FeedTable data={this.state.items} mouseOutHandler={this.mouseOutHandler} />
             {/*------------------------------*/}
 
           </div>

@@ -15,7 +15,7 @@ export const styles = {
     poster: {
         color: "black",
         marginLeft: 20,
-        fontSize: 30
+        fontSize: 20
     },
 
     posterTable: {
