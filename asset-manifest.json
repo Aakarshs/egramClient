@@ -1,15 +1,15 @@
 {
-  "main.css": "/egramClient/static/css/main.56f043ae.chunk.css",
-  "main.js": "/egramClient/static/js/main.86865081.chunk.js",
-  "main.js.map": "/egramClient/static/js/main.86865081.chunk.js.map",
+  "main.css": "/egramClient/static/css/main.550faca6.chunk.css",
+  "main.js": "/egramClient/static/js/main.cee50c13.chunk.js",
+  "main.js.map": "/egramClient/static/js/main.cee50c13.chunk.js.map",
   "runtime~main.js": "/egramClient/static/js/runtime~main.c489841a.js",
   "runtime~main.js.map": "/egramClient/static/js/runtime~main.c489841a.js.map",
   "static/js/2.99950afe.chunk.js": "/egramClient/static/js/2.99950afe.chunk.js",
   "static/js/2.99950afe.chunk.js.map": "/egramClient/static/js/2.99950afe.chunk.js.map",
   "index.html": "/egramClient/index.html",
-  "precache-manifest.beac04103982a2b22e87ee081468aef0.js": "/egramClient/precache-manifest.beac04103982a2b22e87ee081468aef0.js",
+  "precache-manifest.a5b553575cba42d1c8425ab0903f9c90.js": "/egramClient/precache-manifest.a5b553575cba42d1c8425ab0903f9c90.js",
   "service-worker.js": "/egramClient/service-worker.js",
-  "static/css/main.56f043ae.chunk.css.map": "/egramClient/static/css/main.56f043ae.chunk.css.map",
+  "static/css/main.550faca6.chunk.css.map": "/egramClient/static/css/main.550faca6.chunk.css.map",
   "static/media/cancel.png": "/egramClient/static/media/cancel.00258ff0.png",
-  "static/media/egram_logo.png": "/egramClient/static/media/egram_logo.5aab7eac.png"
+  "static/media/egramLogo.png": "/egramClient/static/media/egramLogo.5aab7eac.png"
 }

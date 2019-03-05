@@ -1,7 +1,7 @@
 self.__precacheManifest = [
   {
     "revision": "5aab7eaccc551fe900820e01f85dc173",
-    "url": "/egramClient/static/media/egram_logo.5aab7eac.png"
+    "url": "/egramClient/static/media/egramLogo.5aab7eac.png"
   },
   {
     "revision": "00258ff07e397cfed993ab84f58abb80",
@@ -12,19 +12,19 @@ self.__precacheManifest = [
     "url": "/egramClient/static/js/runtime~main.c489841a.js"
   },
   {
-    "revision": "868650811ea2f33ef143",
-    "url": "/egramClient/static/js/main.86865081.chunk.js"
+    "revision": "cee50c13235e080f0183",
+    "url": "/egramClient/static/js/main.cee50c13.chunk.js"
   },
   {
     "revision": "99950afef7539872c3f5",
     "url": "/egramClient/static/js/2.99950afe.chunk.js"
   },
   {
-    "revision": "868650811ea2f33ef143",
-    "url": "/egramClient/static/css/main.56f043ae.chunk.css"
+    "revision": "cee50c13235e080f0183",
+    "url": "/egramClient/static/css/main.550faca6.chunk.css"
   },
   {
-    "revision": "b93d3ba29238302ed2834fb868a56764",
+    "revision": "6d229d18659f1c51b7cde643f8d56988",
     "url": "/egramClient/index.html"
   }
 ];
