@@ -52,6 +52,9 @@ class List extends Component {
 
   //Function that gets triggered when the component renders. 
   //(This looks for data changes and triggers re-render of the app.)
+  componentWillUpdate() {
+    this.getAll();
+  }
  
 
   //function to refresh the state and update all elements on the page.
