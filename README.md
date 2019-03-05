@@ -9,7 +9,7 @@ Installing the app will take a lot of steps, which includes installing node, npm
 This is a good starting point:  
 https://docs.npmjs.com/downloading-and-installing-node-js-and-npm
 
-##Using the app:
+## Using the app:
 Since it is very time consuming to install the application you can go through the included files or look at the code on Github. We are using Github pages which uses the branch “master” to build the web application. The submission time can be checked by the last commit made on both the repositories any code changes will easily be available through “git diff”.
 
 **To use the app visit:**
@@ -30,7 +30,7 @@ Top posts are determined by the most number of likes a post has.
 
 On the main page, you can see other posts.
 
-##Documentation of the files:    
+## Documentation of the files:    
 There are no files that we adapted from existing code.
 The default way to start writing a ReactJs app is to use “create-react app”. More on this here:
 https://github.com/facebook/create-react-app
@@ -45,7 +45,7 @@ index.js
 
 All the other files are written/created by us.
 
-##Folders:  
+## Folders:  
 **src/apiFunctions :** Contains the functions used by the app as well as the functions that call the endpoints.  
 **src/components:** Contains the individual components used to build the app.  
 **src/styles:** Contains style sheets for the app.   
