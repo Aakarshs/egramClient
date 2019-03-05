@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/egramClient/precache-manifest.a5b553575cba42d1c8425ab0903f9c90.js"
+  "/egramClient/precache-manifest.27279858a42e8f0c6c9b256637106fb1.js"
 );
 
 workbox.clientsClaim();
